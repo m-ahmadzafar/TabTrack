@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Management Enhancer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="logo.ico">
+
+  <style>
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 3px 7px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+
+  .open-button {
+    background-color: greenyellow;
+    color: white;
+  }
+
+  .close-button {
+    background-color: red;
+    color: white;
+  }
+
+  .pin-button {
+    background-color: blue; 
+    color: white;
+  }
+
+  .delete-button {
+    background-color: darkred;
+    color: white;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    width: 100%;
+    font-weight: bolder;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 0px;
+  }
+
+  .flex-div {
+    display: flex;
+  }
+
+  .pinned-url {
+      white-space: nowrap;
+      overflow: hidden;
+      /* text-overflow:ellipsis; */
+      white-space: initial;
+      max-width: 150px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  #pinnedUrlsTable{
+    margin-top: 26px;
+  }
+ 
+
+  </style>
+</head>
+
+<body>
+
+  <h1>TabTrack</h1>
+  <h3>Your Favorite Tabs Manager</h3>
+
+  <div class="flex-div">
+
+    <div>
+      <button id="pinnedUrlsButton" class="button">Pinned URLs</button>
+      <table id="tabTable">
+        <thead>
+          <tr>
+            <th>Website</th>
+            <th>Tab Title</th>
+            <th>Time Opened</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        
+        <tbody id="tabTableBody">
+        </tbody>
+      </table>
+    </div>
+
+    <div id="pinnedUrlsContainer" style="display:none;">
+      <!-- <h2>Pinned URLs</h2> -->
+      <table id="pinnedUrlsTable">
+        <thead>
+          <tr>
+            <th>Pinned Website</th>
+            <th>Pinned URL</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="pinnedUrlsList">
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <p>Want a new feature? Contact wordsofahmad@gmail.com</p>
+  <script src="popup.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- WITH PINNED SHIT -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Management Enhancer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="logo.ico">
+
+  <style>
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  /* font-size: small; */
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.button {
+  display: inline-block;
+  padding: 3px 7px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.open-button {
+  background-color: greenyellow;
+  color: white;
+}
+
+.close-button {
+  background-color: red;
+  color: white;
+}
+
+.pin-button {
+   background-color: blue; 
+   color: white; }
+
+h1, h2, h3{
+  text-align: center;
+}
+
+h1{
+  margin: 0%;
+}
+p{
+  font-weight: bolder;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 2px;
+  margin-bottom: 0px;
+}
+
+.flex-div{
+  display: flex;
+}
+
+
+  </style>
+</head>
+
+
+<body>
+
+  <h1>TabTrack</h1>
+  <h3>Your Favorite Tabs Manager</h3>
+
+  <div class="flex-div">
+
+  <div>
+  <button id="pinnedUrlsButton" class="button">Pinned URLs</button>
+  <table id="tabTable">
+    <thead>
+      <tr>
+        <th>Website</th>
+        <th>Tab Title</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    
+    <tbody id="tabTableBody">
+    </tbody>
+  </table>
+</div>
+  <div id="pinnedUrlsContainer" style="display:none;">
+    <h2>Pinned URLs</h2>
+    <ul id="pinnedUrlsList"></ul>
+  </div>
+
+
+</div>
+  <p>Want a new feature? Contact wordsofahmad@gmail.com</p>
+  <script src="popup.js"></script>
+</body>
+</html> -->
+
+
+
+
+<!-- WITHOUT PINNED SHIT -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Tab Management Enhancer</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+    th { background-color: #f2f2f2; }
+    .close-button { cursor: pointer; color: red; margin-right: 5px; }
+    .open-button { cursor: pointer; color: green; }
+  </style>
+</head>
+<body>
+  <h1>Tab Management Enhancer</h1>
+  <table id="tabTable">
+    <thead>
+      <tr>
+        <th>Website / Category</th>
+        <th>Tab Title</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="tabTableBody">
+    </tbody>
+  </table>
+  <script src="popup.js"></script>
+</body>
+</html> -->
